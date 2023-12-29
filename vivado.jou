@@ -13,3 +13,48 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top DistortionEffect [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top DistortionSim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim
+launch_simulation
+source DistortionSim.tcl
+close_sim

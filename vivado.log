@@ -82,3 +82,688 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
 open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 1544.398 ; gain = 403.734
+update_compile_order -fileset sources_1
+set_property top DistortionEffect [current_fileset]
+update_compile_order -fileset sources_1
+set_property top DistortionSim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1563.676 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 340 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 37
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1563.676 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 340 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 37
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1588.668 ; gain = 7.734
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 340 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 37
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1591.293 ; gain = 1.648
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 550 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 43
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1597.379 ; gain = 5.789
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 550 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 43
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1598.109 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 660 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 46
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1599.777 ; gain = 0.859
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1601.980 ; gain = 1.578
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1711.648 ; gain = 32.902
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.648 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 210 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 56
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1711.648 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DistortionSim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DistortionSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DistortionSim_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DistortionSim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DistortionSim_behav xil_defaultlib.DistortionSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DistortionEffect
+Compiling module xil_defaultlib.DistortionSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DistortionSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DistortionSim_behav -key {Behavioral:sim_1:Functional:DistortionSim} -tclbatch {DistortionSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DistortionSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 140 ns : File "C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v" Line 56
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DistortionSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1711.648 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed

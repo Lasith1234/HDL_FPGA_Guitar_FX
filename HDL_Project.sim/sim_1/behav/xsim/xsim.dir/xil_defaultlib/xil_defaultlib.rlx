@@ -4,4 +4,6 @@ May  7 2023
 15:24:31
 C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim/glbl.v,1703861853,verilog,,,,glbl,,,,,,,,
 C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v,1703863613,verilog,,,,DistortionSim,,,,,,,,
+C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/TremoloSim.v,1703866149,verilog,,,,TremoloSim,,,,,,,,
 C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v,1703862738,verilog,,C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v,,DistortionEffect,,,,,,,,
+C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/TremoloEffect.v,1703865937,verilog,,C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/TremoloSim.v,,TremoloEffect,,,,,,,,
