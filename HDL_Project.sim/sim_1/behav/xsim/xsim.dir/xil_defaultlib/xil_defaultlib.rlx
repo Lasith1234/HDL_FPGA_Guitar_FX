@@ -2,8 +2,6 @@
 2020.2
 May  7 2023
 15:24:31
-D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,
-D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sim_1/new/DistortionSim.v,1703848839,verilog,,,,DistortionSim,,,,,,,,
-D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sim_1/new/TremoloSim.v,1703852213,verilog,,,,TremoloSim,,,,,,,,
-D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sources_1/new/DistortionEffect.v,1703849324,verilog,,D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sim_1/new/DistortionSim.v,,DistortionEffect,,,,,,,,
-D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sources_1/new/TremoloEffect.v,1703852602,verilog,,D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sim_1/new/TremoloSim.v,,TremoloEffect,,,,,,,,
+C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.sim/sim_1/behav/xsim/glbl.v,1703861853,verilog,,,,glbl,,,,,,,,
+C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v,1703863613,verilog,,,,DistortionSim,,,,,,,,
+C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sources_1/new/DistortionEffect.v,1703862738,verilog,,C:/Users/oshan/Desktop/hdlproj/HDL_FPGA_Guitar_FX/HDL_Project.srcs/sim_1/new/DistortionSim.v,,DistortionEffect,,,,,,,,

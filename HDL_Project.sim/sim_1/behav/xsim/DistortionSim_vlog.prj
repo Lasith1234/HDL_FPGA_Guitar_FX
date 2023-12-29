@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../HDL_Project.srcs/sources_1/new/TremoloEffect.v" \
-"../../../../HDL_Project.srcs/sim_1/new/TremoloSim.v" \
+"../../../../HDL_Project.srcs/sources_1/new/DistortionEffect.v" \
+"../../../../HDL_Project.srcs/sim_1/new/DistortionSim.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
