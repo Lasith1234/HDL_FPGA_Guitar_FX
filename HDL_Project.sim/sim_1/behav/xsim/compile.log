@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sources_1/new/TremoloEffect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TremoloEffect
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Lasith/Docs/UOM/Sem 7/Hardware Description Languages/Project/HDL_Project/HDL_Project.srcs/sim_1/new/TremoloSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TremoloSim
